@@ -1,0 +1,170 @@
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	background-color: mistyrose;
+	padding-inline: 20px;
+	padding: 10px 20px;
+	border-radius: 10px ;
+	position: relative;
+}
+
+	header{
+		width: 100%;
+		background: whitesmoke;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo, nav ul li a, label{
+		color: black;
+	}
+	label{
+		display: none;
+	}
+	nav ul{
+		display: flex;
+		gap: 1rem;
+	}
+	nav ul li{
+		list-style: none;
+	}
+	nav ul li a{
+		text-decoration: none;
+	}
+	@media screen and (max-width:480px){
+		label{
+			display: block;
+		}
+		nav{
+			width: 150px;
+			position: absolute;
+			background: #fff;
+			top: 10px;
+			right: 10px;
+			padding: 10px;
+			border-radius: 5pxs;
+			visibility: hidden;
+			opacity: 0;
+			transition: .3s ;
+
+
+
+		}
+		nav ul li a, nav label{
+			color: #111;
+		}
+		nav label{
+			text-align: right;
+		}
+		nav ul{
+			flex-direction: column;
+		}
+		input:checked ~ nav {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+}
+footer {
+    text-align: bottom;
+    padding: 50px;
+    color: #000000;\
+
+}
+.a:before,
+a:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: #FFB6C1;
+    transition: .5s;
+}
+.a:after{
+    left: 0;
+    bottom: -10px;
+}
+.a:before{
+    right: 0;
+    top: -10;
+}
+.a:hover:after,
+.a:hover:before{
+    width: 100%;
+}
+.a {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: .5px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.box{
+    display: flex;
+    height: 800px;
+    width: 1000px;
+    gap: 1rem;
+}
+.bg1{
+    background: url("./img/a.jpg");
+}
+.bg2{
+    background: url("./img/g.jpg");
+}
+.bg3{
+    background: url("./img/h.jpg");
+}
+.bg4{
+    background: url("./img/aaa.jpg");
+}
+.bg5{
+    background: url("./img/aa.jpg");
+}
+
+.box >div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+.box > div:hover{
+    flex: 5;
+}
+h2{
+	
+	left: 300px;
+	font-size: clamp(1.25rem, -1.0938rem + 7.5vw, 3.125rem);
+	text-align: center;
+}
+h1{
+	font-size: clamp(1.25rem, -1.0938rem + 7.5vw, 3.125rem);
+	font-style: italic;
+}
+h1{
+	font-family: 'courier prime';
+}
+a{
+	font-family: 'courier prime';
+}
